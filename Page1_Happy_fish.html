@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page1</title>
+    <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body>
+<h1><b>Happy Fish</b></h1>
+<h2><i>Fish in your aquarium</i></h2>
+<h3>Contents:</h3>
+<p>
+
+    <svg width="350" height="80" style="display: block; margin-left: auto; margin-right: auto;">
+        <text x="10" y="60" font-family="Comic sans ms" font-size="40" fill="white" stroke="blue" stroke-width="2">
+            What you need:
+        </text>
+    </svg>
+
+
+    <div style="width: 10%; margin: 0 auto;">
+    <ul>
+        <li>Big aquarium</li>
+        <li>Clean whater</li>
+        <li>Fish</li>
+        <li>Good food</li>
+    </ul>
+</div>
+
+
+<p style="text-align: center;">
+<a href="https://www.youtube.com/shorts/UJ81j118yvc"><i>Watch video here:</i></a>
+</p>
+
+
+
+<button id="toggleMusic">Turn on MUSIC</button>
+
+<audio id="backgroundMusic" loop style="display: none;">
+    <source src="calm-jazz-220610.mp3" type="audio/mpeg">
+   Music is muted .
+</audio>
+
+<script>
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    const toggleMusicButton = document.getElementById('toggleMusic');
+    let isPlaying = false;
+
+    toggleMusicButton.addEventListener('click', () => {
+        if (isPlaying) {
+            backgroundMusic.pause();
+            toggleMusicButton.textContent = 'Turn on MUSIC';
+        } else {
+            backgroundMusic.play();
+            toggleMusicButton.textContent = 'Turn off MUSIC';
+        }
+        isPlaying = !isPlaying;
+    });
+</script>
+
+
+
+<table>
+    <caption>Something important about fish:</caption>
+    <tr>
+        <th>Food</th>
+        <th>Days</th>
+    </tr>
+    <tr>
+        <td>amount per day</td>
+        <td>times of feeding</td>
+    </tr>
+    <tr>
+        <td>20mlg</td>
+        <td>3 times</td>
+    </tr>
+</table>
+
+
+</body>
+</html>
+
+
+
